@@ -5,3 +5,10 @@
 .active{
   @apply underline underline-offset-8 decoration-orange-400 decoration-2
 }
+
+.whyChooseUsCard {
+  @apply border-[1px] border-[#E8E8E8] rounded-xl w-[170px] h-[156px] items-center justify-center flex flex-col
+}
+.mySwiper {
+  @apply w-full /* or an appropriate max-width */
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { FaGoogle,FaInstagram,FaTwitter,FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="footer bg-black text-white py-[130px] px-[150px]">
+    <footer className="footer bg-black text-white py-[130px] justify-center md:justify-normal md:px-[150px]">
       <aside>
         <img className="h-[90px]" src="/assets/footerLogo.png" alt="" />
         <p className="max-w-[283px]">Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
