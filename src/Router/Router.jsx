@@ -4,7 +4,13 @@ import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Services from "../Pages/Services/Services";
 import Blog from "../Pages/Blog/Blog";
-import Contact from "../Pages/Contact/Contact";
+import ServiceFullDetails from "../Pages/ServiceFullDetails/ServiceFullDetails";
+import CheckOut from "../Pages/CheckOut.jsx/CheckOut";
+import Login from "../Pages/Login/Login";
+import SignUp from "../Pages/Login/SignUp";
+import PrivateRoute from "./PrivateRoute";
+import OrderList from "../Pages/MyOrderList/OrderList";
+import Error from "../Pages/Error/Error";
 
 const Router = createBrowserRouter([
     {
@@ -14,7 +20,8 @@ const Router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('service.json')
+                loader: () => fetch('http://localhost:3000/services'),
+                errorElement: <Error></Error>
             },
             {
                 path: '/about',
@@ -22,16 +29,41 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/services',
-                element: <Services></Services>
+                loader: () => fetch('http://localhost:3000/services'),
+                element: <Services></Services>,
+                errorElement: <Error></Error>
+            },
+            {
+                path: '/services/:id',
+                loader: ({params}) => fetch(`http://localhost:3000/services/${params.id}`),
+                element: <ServiceFullDetails></ServiceFullDetails>,
+                errorElement: <Error></Error>
             },
             {
                 path: '/blog',
                 element: <Blog></Blog>
             },
             {
-                path: '/contact',
-                element: <Contact></Contact>
+                path: '/logIn',
+                element: <Login></Login>,
+                errorElement: <Error></Error>
             },
+            {
+                path: '/signUp',
+                element: <SignUp></SignUp>,
+                errorElement: <Error></Error>
+            },
+            {
+                path: '/checkOut/:id',
+                loader: ({params}) => fetch(`http://localhost:3000/services/${params.id}`),
+                element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
+                errorElement: <Error></Error>
+            },
+            {
+                path: '/orderList',
+                element: <PrivateRoute><OrderList></OrderList></PrivateRoute>,
+                errorElement: <Error></Error>
+            }
         ]
     }
 ])

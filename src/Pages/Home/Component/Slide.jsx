@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Slide = ({slide}) => {
-    // const {currentSlide} = useContext(AuthContext)
     return (
       <div
         className="hero min-h-[600px] text-white relative rounded-xl"

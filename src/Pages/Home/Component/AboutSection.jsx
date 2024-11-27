@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <div className=" bg-base-200 min-h-[557px] mt-[130px] border-2 border-black">
+    <div className=" bg-base-200 min-h-[557px] mt-[130px]">
       <div className="hero-content flex-col lg:flex-row justify-between w-full">
         <div className="relative">
             <img src="/assets/images/about_us/person.jpg"  className="md:h-[473px] md:w-[460px] rounded-lg shadow-2xl"

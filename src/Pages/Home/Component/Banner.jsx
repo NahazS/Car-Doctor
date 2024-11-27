@@ -31,7 +31,7 @@ const Banner = () => {
           className="mySwiper"
         >
           {
-            allSlide.map(slide => <SwiperSlide><Slide slide={slide}></Slide></SwiperSlide>)
+            allSlide.map(slide => <SwiperSlide key={slide}><Slide slide={slide}></Slide></SwiperSlide>)
           }
         </Swiper>
         <div className="flex absolute z-10 top-[90%] right-0">

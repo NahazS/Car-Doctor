@@ -13,11 +13,6 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import TeamSlide from '../../../AllSlider/TeamSlide';
 const OurTeam = () => {
     const allSlide = [1,2,3,4]
-    console.log({
-        320: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      });
     return (
         <>
             <div className="items-center flex flex-col mt-[130px]">
@@ -60,7 +55,7 @@ const OurTeam = () => {
                   }}
                 >
                   {
-                    allSlide.map(slide => <SwiperSlide><TeamSlide slide={slide}></TeamSlide></SwiperSlide>)
+                    allSlide.map(slide => <SwiperSlide key={slide} ><TeamSlide slide={slide}></TeamSlide></SwiperSlide>)
                   }
                 </Swiper>
             </div>

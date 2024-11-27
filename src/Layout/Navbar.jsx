@@ -12,12 +12,12 @@ const Navbar = () => {
           <li><NavLink to={'/'}>Home</NavLink></li>
           <li><NavLink to={'/about'}>About</NavLink></li>
           <li><NavLink to={'/services'}>Services</NavLink></li>
-          <li><NavLink to={'/blog'}>Blog</NavLink></li>
-          <li><NavLink to={'/contact'}>Contact</NavLink></li>
+          <li><NavLink to={'/orderList'}>Order List</NavLink></li>
+          <li><NavLink to={'/logIn'}>LogIn</NavLink></li>
         </ul>
       </div>
       <div className="navbar-end">
-      <div className="dropdown z-10">
+      <div className="dropdown z-30">
         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
           <button className="btn"><HiOutlineMenuAlt3 className="text-2xl font-bold" /></button>
           </div>
@@ -26,7 +26,7 @@ const Navbar = () => {
               <li><NavLink to={'/about'}>About</NavLink></li>
               <li><NavLink to={'/services'}>Services</NavLink></li>
               <li><NavLink to={'/blog'}>Blog</NavLink></li>
-              <li><NavLink to={'/contact'}>Contact</NavLink></li>
+              <li><NavLink to={'/logIn'}>LogIn</NavLink></li>
           </ul>
         </div>
         <IoBagOutline className="text-2xl mr-5 hidden md:flex"></IoBagOutline>
